@@ -2,10 +2,12 @@
   "name": "expressgraphqlapollo",
   "version": "1.0.0",
   "description": "App that lists SpaceX launch missions",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Eren Akbulut",
   "license": "MIT",
@@ -15,8 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^15.1.0",
-    "hltv-api": "^1.5.0"
+    "graphql": "^15.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
